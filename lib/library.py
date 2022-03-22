@@ -1,7 +1,8 @@
-from cgitb import text
+from tkinter import *
 import os
-from tkinter import filedialog, Tk, Menu
-from turtle import undo
+from tkinter import filedialog, Tk, Frame, Menu
+from tkinter import LEFT, TOP, X, FLAT, RAISED
+
 
 savedFile = {1: ""}
 
@@ -21,7 +22,7 @@ class grilleEditor:
 
     def add_Text(self):
         '''création de la zone de texte'''
-        self.zone_edition = text(self.main_window, undo=True)
+        self.zone_edition = Text(self.main_window, undo=True)
         self.zone_edition.pack(expand=True, fill='both')
 
     def generate(self):
